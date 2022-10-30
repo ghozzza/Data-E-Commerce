@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('tahun');
             $table->integer('bulan');
-            $table->foreignId('id_sekolah')->constrained{'sekolahs'};
+            $table->foreignId('id_sekolah')->constrained('sekolahs');
             $table->integer('jml_rombel');
             $table->integer('jml_guru');
             $table->integer('jml_peserta_didik');
