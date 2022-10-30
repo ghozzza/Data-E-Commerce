@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('riwayat_orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_user');
+            $table->foreignId('id_user')->constrained('users');
             $table->timestamp('tgl_order');
             $table->foreignId('id_paket')->constrained('pakets');
             $table->string('status_order');
