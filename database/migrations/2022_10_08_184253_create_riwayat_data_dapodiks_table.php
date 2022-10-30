@@ -15,7 +15,13 @@ return new class extends Migration
     {
         Schema::create('riwayat_data_dapodiks', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->int('tahun');
+            $table->int('bulan');
+            $table->int('id_sekolah');
+            $table->int('jml_rombel');
+            $table->int('jml_guru');
+            $table->int('jml_peserta_didik');
+            $table->int('jml_tendik');
         });
     }
 

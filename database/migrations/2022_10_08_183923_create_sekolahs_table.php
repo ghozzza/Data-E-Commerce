@@ -15,7 +15,15 @@ return new class extends Migration
     {
         Schema::create('sekolahs', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->int('npsn');
+            $table->string('nama');
+            $table->int('id_kecamatan');
+            $table->string('alamat');
+            $table->string('nama_kepsek');
+            $table->int('nip');
+            $table->int('no_telp_kepsek');
+            $table->int('id_jenis_sekolah');
+            $table->string('email');
         });
     }
 

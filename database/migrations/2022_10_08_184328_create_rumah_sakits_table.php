@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('rumah_sakits', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nama');
+            $table->string('alamat');
+            $table->int('no_telp');
         });
     }
 

@@ -15,7 +15,9 @@ return new class extends Migration
     {
         Schema::create('kabupatens', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->int('kode');
+            $table->int('id_provinsi');
+            $table->string('nama');
         });
     }
 

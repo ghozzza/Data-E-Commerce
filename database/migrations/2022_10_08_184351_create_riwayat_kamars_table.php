@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('riwayat_kamars', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->timestamps('tanggal');
+            $table->string('nama_kamar');
+            $table->int('jml_kosong');
+            $table->int('jml_ruang');
+            $table->int('jml_terisi');
         });
     }
 
