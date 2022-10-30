@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('riwayat_data_dapodiks', function (Blueprint $table) {
             $table->id();
-            $table->int('tahun');
-            $table->int('bulan');
-            $table->int('id_sekolah');
-            $table->int('jml_rombel');
-            $table->int('jml_guru');
-            $table->int('jml_peserta_didik');
-            $table->int('jml_tendik');
+            $table->integer('tahun');
+            $table->integer('bulan');
+            $table->foreignId('id_sekolah')->constrained{'sekolahs'};
+            $table->integer('jml_rombel');
+            $table->integer('jml_guru');
+            $table->integer('jml_peserta_didik');
+            $table->integer('jml_tendik');
         });
     }
 

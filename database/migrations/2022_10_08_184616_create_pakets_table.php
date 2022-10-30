@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('pakets', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->int('lama_langganan');
-            $table->int('harga');
+            $table->integer('lama_langganan');
+            $table->integer('harga');
         });
     }
 

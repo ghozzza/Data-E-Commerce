@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('sekolahs', function (Blueprint $table) {
             $table->id();
-            $table->int('npsn');
+            $table->integer('npsn');
             $table->string('nama');
-            $table->int('id_kecamatan');
+            $table->foreignId('id_kecamatan')->constrained('kecamatans');
             $table->string('alamat');
             $table->string('nama_kepsek');
-            $table->int('nip');
-            $table->int('no_telp_kepsek');
-            $table->int('id_jenis_sekolah');
+            $table->integer('nip');
+            $table->integer('no_telp_kepsek');
+            $table->integer('id_jenis_sekolah');
             $table->string('email');
         });
     }

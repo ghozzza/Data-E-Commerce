@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('kecamatans', function (Blueprint $table) {
             $table->id();
-            $table->int('kode');
-            $table->int('id_kabupaten');
+            $table->integer('kode');
+            $table->foreignId('id_kabupaten')->constrained('kabupatens');
             $table->string('nama');
         });
     }

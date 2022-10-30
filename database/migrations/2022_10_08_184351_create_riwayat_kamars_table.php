@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->timestamps('tanggal');
             $table->string('nama_kamar');
-            $table->int('jml_kosong');
-            $table->int('jml_ruang');
-            $table->int('jml_terisi');
+            $table->integer('jml_kosong');
+            $table->integer('jml_ruang');
+            $table->integer('jml_terisi');
         });
     }
 

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('kabupatens', function (Blueprint $table) {
             $table->id();
-            $table->int('kode');
-            $table->int('id_provinsi');
+            $table->integer('kode');
+            $table->foreignId('id_provinsi')->constrained('provinsi');
             $table->string('nama');
         });
     }
