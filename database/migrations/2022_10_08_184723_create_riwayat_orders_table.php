@@ -19,8 +19,8 @@ return new class extends Migration
             $table->timestamp('tgl_order');
             $table->foreignId('id_paket')->constrained('pakets');
             $table->string('status_order');
-            $table->datetime('tgl_mulai_langganan');
-            $table->datetime('tgl_berakhir_langganan');
+            $table->date('tgl_mulai_langganan');
+            $table->date('tgl_berakhir_langganan');
         });
     }
 

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('profil_users', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_user')->constrained('users');
-            $table->string('alamat');
+            $table->text('alamat');
             $table->foreignId('id_kabupaten')->constrained('kabupatens');
         });
     }

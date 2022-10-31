@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('npsn');
             $table->string('nama');
             $table->foreignId('id_kecamatan')->constrained('kecamatans');
-            $table->string('alamat');
+            $table->text('alamat');
             $table->string('nama_kepsek');
             $table->integer('nip');
             $table->integer('no_telp_kepsek');
