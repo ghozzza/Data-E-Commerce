@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama');
             $table->text('alamat');
             $table->integer('no_telp');
+            $table->timestamps();
         });
     }
 

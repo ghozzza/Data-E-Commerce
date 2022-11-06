@@ -39,6 +39,14 @@ Route::get('/admin-dashboard/provinsi', [adminProvinsiController::class, "index"
 Route::get('/admin-dashboard/riwayat-data-dapodik', [adminRiwayatDataDapodikController::class, "index"]);
 Route::get('/admin-dashboard/riwayat-kamar', [adminRiwayatKamarController::class, "index"]);
 Route::get('/admin-dashboard/riwayat-order', [adminRiwayatOrderController::class, "index"]);
+
+// admin rumah sakit
 Route::get('/admin-dashboard/rumah-sakit', [adminRumahSakitController::class, "index"]);
+Route::get('/admin-dashboard/rumah-sakit/create', [adminRumahSakitController::class, "create"]);
+Route::post('/admin-dashboard/rumah-sakit/store', [adminRumahSakitController::class, "store"]);
+Route::get('/admin-dashboard/rumah-sakit/edit/{id}', [adminRumahSakitController::class, "edit"]);
+Route::put('/admin-dashboard/rumah-sakit/update/{id}', [adminRumahSakitController::class, 'update']);
+Route::delete('/admin-dashboard/rumah-sakit/delete/{id}', [adminRumahSakitController::class, 'delete']);
+
 Route::get('/admin-dashboard/sekolah', [adminSekolahController::class, "index"]);
 Route::get('/admin-dashboard/user', [adminUserController::class, "index"]);
