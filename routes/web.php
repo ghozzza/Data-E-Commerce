@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', [adminController::class, "index"]);
+Route::get('/admin-dashboard', [adminController::class, "index"]);
