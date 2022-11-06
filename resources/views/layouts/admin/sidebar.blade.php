@@ -4,7 +4,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="{{ url('/admin-dashboard') }}">
+            <a class="nav-link collapsed" href="{{ url('/admin-dashboard') }}">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -70,7 +70,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{ url('/admin-dashboard/profil') }}">
+            <a class="nav-link collapsed" href="{{ url('/admin-dashboard/profil-user') }}">
                 <i class="bi bi-grid"></i>
                 <span>Profil User</span>
             </a>
