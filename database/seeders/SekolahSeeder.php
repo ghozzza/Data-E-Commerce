@@ -25,7 +25,7 @@ class SekolahSeeder extends Seeder
                 'nama' => 'SMA ' . $faker->lastName,
                 'regency_id' => $regencies[rand(1, 514)]->id,
                 'alamat' => $faker->address,
-                'nama_kepsek' => 'Rumah Sakit ' . $faker->name,
+                'nama_kepsek' => $faker->name,
                 'nip' => rand(1000, 9999),
                 'no_telp_kepsek' => rand(),
                 'id_jenis_sekolah' => rand(1, 10),

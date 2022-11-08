@@ -52,12 +52,6 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="index.{{ url('/admin-dashboard/provinsi') }}">
-                <i class="bi bi-grid"></i>
-                <span>Provinsi</span>
-            </a>
-        </li>
-        <li class="nav-item">
             <a class="nav-link collapsed" href="{{ url('/admin-dashboard/paket') }}">
                 <i class="bi bi-grid"></i>
                 <span>Paket</span>
