@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_user')->constrained('users');
             $table->text('alamat');
-            $table->foreignId('id_kabupaten')->constrained('kabupatens');
+            $table->foreignId('regency_id')->constrained('regencies');
+            $table->timestamps();
         });
     }
 

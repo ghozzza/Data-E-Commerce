@@ -17,13 +17,15 @@ return new class extends Migration
             $table->id();
             $table->integer('npsn');
             $table->string('nama');
-            $table->foreignId('id_kecamatan')->constrained('kecamatans');
+            // $table->foreignId('id_kecamatan')->constrained('kecamatans');
+            $table->foreignId('regency_id')->constrained('regencies');
             $table->text('alamat');
             $table->string('nama_kepsek');
             $table->integer('nip');
             $table->integer('no_telp_kepsek');
             $table->integer('id_jenis_sekolah');
             $table->string('email');
+            $table->timestamps();
         });
     }
 

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('jml_kosong');
             $table->integer('jml_ruang');
             $table->integer('jml_terisi');
+            $table->timestamps();
         });
     }
 

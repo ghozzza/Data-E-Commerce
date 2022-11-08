@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::create('provinsi', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->integer('kode');
-        //     $table->string('nama');
-        // });
+        Schema::create('regencies', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('province_id')->constrained('provinces');
+            $table->string('name');
+        });
     }
 
     /**
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('provinsi');
+        Schema::dropIfExists('regencies');
     }
 };

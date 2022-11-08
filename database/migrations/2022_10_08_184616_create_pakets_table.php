@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama');
             $table->integer('lama_langganan');
             $table->integer('harga');
+            $table->timestamps();
         });
     }
 

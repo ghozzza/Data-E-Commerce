@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('status_order');
             $table->date('tgl_mulai_langganan');
             $table->date('tgl_berakhir_langganan');
+            $table->timestamps();
         });
     }
 

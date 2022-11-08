@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('jml_guru');
             $table->integer('jml_peserta_didik');
             $table->integer('jml_tendik');
+            $table->timestamps();
         });
     }
 

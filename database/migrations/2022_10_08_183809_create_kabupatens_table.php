@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kabupatens', function (Blueprint $table) {
-            $table->id();
-            $table->integer('kode');
-            $table->foreignId('id_provinsi')->constrained('provinsi');
-            $table->string('nama');
-        });
+        // Schema::create('kabupatens', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->integer('kode');
+        //     $table->foreignId('id_provinsi')->constrained('provinsi');
+        //     $table->string('nama');
+        // });
     }
 
     /**
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kabupatens');
+        // Schema::dropIfExists('kabupatens');
     }
 };
