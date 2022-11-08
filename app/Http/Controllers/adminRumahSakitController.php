@@ -12,6 +12,8 @@ class adminRumahSakitController extends Controller
     {
         $rumah_sakit = DB::table('rumah_sakits')
             ->get();
+            // dd($rumah_sakit[1]->id);
+            // dd($rumah_sakit);
         return view(
             'admin.rumah-sakit.index',
             [
