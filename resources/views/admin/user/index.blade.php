@@ -10,11 +10,11 @@
         <div class="pagetitle">
             <div class="container">
 
-                <h1>Sekolah</h1>
+                <h1>User</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('admin-dashboard/') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Sekolah</li>
+                        <li class="breadcrumb-item active">User</li>
                     </ol>
                 </nav>
             </div>
