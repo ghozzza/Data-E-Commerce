@@ -24,7 +24,7 @@ class RiwayatDataDapodikSeeder extends Seeder
             DB::table('riwayat_data_dapodiks')->insert([
                 'tahun' => $faker->year,
                 'bulan' => rand(1, 12),
-                'id_sekolah' => $sekolahs[rand(1, $sekolahs_count)]->id,
+                'id_sekolah' => $sekolahs[rand(1, $sekolahs_count - 1)]->id,
                 'jml_rombel' => rand(1, 30),
                 'jml_guru' => rand(1, 30),
                 'jml_peserta_didik' => rand(30, 300),

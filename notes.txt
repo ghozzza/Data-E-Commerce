@@ -4,3 +4,10 @@ run di db prov,kabupaten dll
 
 php artisan db:seed --class=RoleSeeder
 php artisan db:seed --class=UserSeeder
+php artisan db:seed --class=PaketSeeder
+php artisan db:seed --class=ProfilUserSeeder
+php artisan db:seed --class=SekolahSeeder
+php artisan db:seed --class=RumahSakitSeeder
+php artisan db:seed --class=RiwayatKamarSeeder
+php artisan db:seed --class=RiwayatOrderSeeder
+php artisan db:seed --class=RiwayatDataDapodikSeeder
