@@ -28,7 +28,7 @@
                     <div class="p-3 mb-2 bg-danger text-white rounded-3">{!! \Session::get('error') !!}</div>
                 @endif
                 <a class="btn btn-primary mb-3" href="{{ url('/admin-dashboard/rumah-sakit/create') }}">Create</a>
-                <table class="table">
+                <table class="table" id="table_id">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>

@@ -569,6 +569,8 @@
                             @csrf
                             <button>Klik untuk logout</button>
                         </form>
+                    @else
+                        <a href="{{ url('sign-in') }}">Login Disini</a>
                     @endif
                 </div>
             </div>
