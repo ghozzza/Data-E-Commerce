@@ -13,6 +13,7 @@ use App\Http\Controllers\adminRiwayatOrderController;
 use App\Http\Controllers\adminRumahSakitController;
 use App\Http\Controllers\adminSekolahController;
 use App\Http\Controllers\adminUserController;
+use App\Http\Controllers\loginController;
 
 
 /*
@@ -50,3 +51,5 @@ Route::delete('/admin-dashboard/rumah-sakit/delete/{id}', [adminRumahSakitContro
 
 Route::get('/admin-dashboard/sekolah', [adminSekolahController::class, "index"]);
 Route::get('/admin-dashboard/user', [adminUserController::class, "index"]);
+
+Route::get('/sign-in', [loginController::class, "index"]);
