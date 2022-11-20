@@ -14,6 +14,7 @@ use App\Http\Controllers\adminRumahSakitController;
 use App\Http\Controllers\adminSekolahController;
 use App\Http\Controllers\adminUserController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\registerController;
 
 
 /*
@@ -31,25 +32,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin-dashboard', [adminController::class, "index"]);
-Route::get('/admin-dashboard/kabupaten', [adminKabupatenController::class, "index"]);
-Route::get('/admin-dashboard/kecamatan', [adminKecamatanController::class, "index"]);
-Route::get('/admin-dashboard/paket', [adminPaketController::class, "index"]);
-Route::get('/admin-dashboard/profil-user', [adminProfilUserController::class, "index"]);
-Route::get('/admin-dashboard/provinsi', [adminProvinsiController::class, "index"]);
-Route::get('/admin-dashboard/riwayat-data-dapodik', [adminRiwayatDataDapodikController::class, "index"]);
-Route::get('/admin-dashboard/riwayat-kamar', [adminRiwayatKamarController::class, "index"]);
-Route::get('/admin-dashboard/riwayat-order', [adminRiwayatOrderController::class, "index"]);
+Route::get('/admin-dashboard', [adminController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/kabupaten', [adminKabupatenController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/kecamatan', [adminKecamatanController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/paket', [adminPaketController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/profil-user', [adminProfilUserController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/provinsi', [adminProvinsiController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/riwayat-data-dapodik', [adminRiwayatDataDapodikController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/riwayat-kamar', [adminRiwayatKamarController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/riwayat-order', [adminRiwayatOrderController::class, "index"])->middleware('auth', 'auth.role:1');
 
 // admin rumah sakit
-Route::get('/admin-dashboard/rumah-sakit', [adminRumahSakitController::class, "index"]);
-Route::get('/admin-dashboard/rumah-sakit/create', [adminRumahSakitController::class, "create"]);
-Route::post('/admin-dashboard/rumah-sakit/store', [adminRumahSakitController::class, "store"]);
-Route::get('/admin-dashboard/rumah-sakit/edit/{id}', [adminRumahSakitController::class, "edit"]);
-Route::put('/admin-dashboard/rumah-sakit/update/{id}', [adminRumahSakitController::class, 'update']);
-Route::delete('/admin-dashboard/rumah-sakit/delete/{id}', [adminRumahSakitController::class, 'delete']);
+Route::get('/admin-dashboard/rumah-sakit', [adminRumahSakitController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/rumah-sakit/create', [adminRumahSakitController::class, "create"])->middleware('auth', 'auth.role:1');
+Route::post('/admin-dashboard/rumah-sakit/store', [adminRumahSakitController::class, "store"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/rumah-sakit/edit/{id}', [adminRumahSakitController::class, "edit"])->middleware('auth', 'auth.role:1');
+Route::put('/admin-dashboard/rumah-sakit/update/{id}', [adminRumahSakitController::class, 'update'])->middleware('auth', 'auth.role:1');
+Route::delete('/admin-dashboard/rumah-sakit/delete/{id}', [adminRumahSakitController::class, 'delete'])->middleware('auth', 'auth.role:1');
 
-Route::get('/admin-dashboard/sekolah', [adminSekolahController::class, "index"]);
-Route::get('/admin-dashboard/user', [adminUserController::class, "index"]);
+Route::get('/admin-dashboard/sekolah', [adminSekolahController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/user', [adminUserController::class, "index"])->middleware('auth', 'auth.role:1');
 
 Route::get('/sign-in', [loginController::class, "index"]);
+Route::post('/sign-in', [LoginController::class, "login"]);
+Route::post('/logout', [LoginController::class, "logout"]);
+
+Route::get('/sign-up', [registerController::class, "index"]);

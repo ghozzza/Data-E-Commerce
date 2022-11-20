@@ -6,18 +6,19 @@
             <div class="row justify-content-md-center h-100">
                 <div class="card-wrapper">
                     <div class="brand">
-                        <img src="<?= asset('login/img/logo.jpg')?>" alt="logo">
+                        <img src="<?= asset('login/img/logo.jpg') ?>" alt="logo">
                     </div>
                     <div class="card fat">
                         <div class="card-body">
                             <h4 class="card-title">Login</h4>
-                            <form method="POST" class="my-login-validation" novalidate="">
+                            <form action="{{ url('sign-in') }}" method="POST" class="my-login-validation" novalidate="">
+                                @csrf
                                 <div class="form-group">
-                                    <label for="email">E-Mail Address</label>
-                                    <input id="email" type="email" class="form-control" name="email" value=""
+                                    <label for="email">Username Address</label>
+                                    <input id="username" type="username" class="form-control" name="username" value=""
                                         required autofocus>
                                     <div class="invalid-feedback">
-                                        Email is invalid
+                                        Username is invalid
                                     </div>
                                 </div>
 
@@ -47,7 +48,7 @@
                                     </button>
                                 </div>
                                 <div class="mt-4 text-center">
-                                    Don't have an account? <a href="register.html">Create One</a>
+                                    Don't have an account? <a href="{{ url('sign-up') }}">Create One</a>
                                 </div>
                             </form>
                         </div>
