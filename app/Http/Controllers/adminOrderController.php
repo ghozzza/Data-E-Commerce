@@ -11,7 +11,7 @@ class adminOrderController extends Controller
     {
         $orders = DB::table('orders')->get();
         $orders_count = DB::table('orders')->count();
-        if ($orders != null) {
+        if ($orders_count != 0) {
             for ($i = 0; $i < $orders_count; $i++) {
                 $curl = curl_init();
 
@@ -40,12 +40,16 @@ class adminOrderController extends Controller
             }
 
             curl_close($curl);
+            return view('admin.order.index', [
+                'orders' => $orders,
+                'orders_count' => $orders_count,
+                'responses' => $responses,
+            ]);
         }
-        // dd($responses[0]['transaction_status']);
         return view('admin.order.index', [
             'orders' => $orders,
             'orders_count' => $orders_count,
-            'responses' => $responses,
         ]);
+        // dd($responses[0]['transaction_status']);
     }
 }

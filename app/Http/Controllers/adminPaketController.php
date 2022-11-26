@@ -43,6 +43,7 @@ class adminPaketController extends Controller
                         'price' => $pakets['harga'],
                         'quantity' => 1,
                         'name' => $pakets['nama'],
+                        'subscribtion' => $pakets['lama_langganan']
 
                         // 'id' => $v->id,
                         // 'price' => $v->harga,
@@ -54,7 +55,7 @@ class adminPaketController extends Controller
                     'first_name' => Auth::user()->username,
                     'last_name' => Auth::user()->username,
                     'email' => Auth::user()->email,
-                    'phone' => '08111222333',
+                    'phone' => Auth::user()->no_telp,
                 ),
             );
         
@@ -70,6 +71,7 @@ class adminPaketController extends Controller
     {
 
         $json = json_decode($request->get('json'));
+        $pakets = Paket::find($id);
         // dd($json);
         $order = new Order();
         $order->status = $json->transaction_status;
@@ -82,6 +84,9 @@ class adminPaketController extends Controller
         $order->order_id = $json->order_id;
         $order->gross_amount = $json->gross_amount;
         $order->payment_type = $json->payment_type;
+        $order->tgl_order = date("Y-m-d H:i:s");
+        $order->tgl_mulai_langganan = date("Y/m/d");
+        $order->tgl_berakhir_langganan = date("Y-m-d", strtotime(' + '. $pakets['lama_langganan'] .' days'));
         $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
         return $order->save() ? redirect(url('/admin-dashboard/paket'))->with('success', 'Jadwalmu Berhasil di Order!') : redirect(url('/admin-dashboard/paket'))->with('alert-failed', 'Terjadi kesalahan');

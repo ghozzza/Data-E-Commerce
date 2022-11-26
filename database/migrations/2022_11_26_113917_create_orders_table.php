@@ -27,6 +27,9 @@ return new class extends Migration
             $table->string('payment_type'); //
             $table->string('payment_code')->nullable();
             $table->string('pdf_url')->nullable();
+            $table->timestamp('tgl_order');
+            $table->date('tgl_mulai_langganan');
+            $table->date('tgl_berakhir_langganan');
             $table->foreignId('paket_id')->constrained('pakets');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
