@@ -12,6 +12,7 @@ use App\Http\Controllers\adminRiwayatKamarController;
 use App\Http\Controllers\adminRiwayatOrderController;
 use App\Http\Controllers\adminRumahSakitController;
 use App\Http\Controllers\adminSekolahController;
+use App\Http\Controllers\adminOrderController;
 use App\Http\Controllers\adminUserController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registerController;
@@ -35,12 +36,12 @@ Route::get('/', function () {
 Route::get('/admin-dashboard', [adminController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/kabupaten', [adminKabupatenController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/kecamatan', [adminKecamatanController::class, "index"])->middleware('auth', 'auth.role:1');
-Route::get('/admin-dashboard/paket', [adminPaketController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/profil-user', [adminProfilUserController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/provinsi', [adminProvinsiController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/riwayat-data-dapodik', [adminRiwayatDataDapodikController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/riwayat-kamar', [adminRiwayatKamarController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/riwayat-order', [adminRiwayatOrderController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/order', [adminOrderController::class, "index"])->middleware('auth', 'auth.role:1');
 
 // admin rumah sakit
 Route::get('/admin-dashboard/rumah-sakit', [adminRumahSakitController::class, "index"])->middleware('auth', 'auth.role:1');
@@ -52,6 +53,11 @@ Route::delete('/admin-dashboard/rumah-sakit/delete/{id}', [adminRumahSakitContro
 
 Route::get('/admin-dashboard/sekolah', [adminSekolahController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/user', [adminUserController::class, "index"])->middleware('auth', 'auth.role:1');
+
+// admin paket test
+Route::get('/admin-dashboard/paket', [adminPaketController::class, "index"])->middleware('auth', 'auth.role:1');
+Route::get('/admin-dashboard/paket/details/{id}', [adminPaketController::class, "details"])->middleware('auth', 'auth.role:1');
+Route::post('/admin-dashboard/paket/details/{id}', [adminPaketController::class, "payment_post"])->middleware('auth', 'auth.role:1');
 
 Route::get('/sign-in', [loginController::class, "index"]);
 Route::post('/sign-in', [LoginController::class, "login"]);

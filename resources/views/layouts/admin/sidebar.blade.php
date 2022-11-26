@@ -75,6 +75,12 @@
                 <span>Riwayat Order</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ url('/admin-dashboard/order') }}">
+                <i class="bi bi-grid"></i>
+                <span>Order</span>
+            </a>
+        </li>
 
     </ul>
 

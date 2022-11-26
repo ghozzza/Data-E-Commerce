@@ -27,15 +27,6 @@ class loginController extends Controller
                 return redirect()->intended('/admin-dashboard');
             }
 
-            // $users = User::where('username', $credentials['username'])->firstOrFail();
-            // $token = $users->createToken('auth_token')->plainTextToken;
-
-            // DB::table('users')
-            //     ->where('username', $request->username)
-            //     ->update(['remember_token' => $token]);
-            // $this->saveCookie();
-
-
             $request->session()->regenerate();
             return redirect()->intended('/');
         }

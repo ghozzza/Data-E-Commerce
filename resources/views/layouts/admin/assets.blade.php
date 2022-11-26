@@ -30,6 +30,9 @@
 
     <!-- Template Main CSS File -->
     <link href="<?= asset('admin/assets/css/style.css') ?>" rel="stylesheet">
+
+    {{-- Midtrans --}}
+    @yield('midtrans')
 </head>
 
 <body>

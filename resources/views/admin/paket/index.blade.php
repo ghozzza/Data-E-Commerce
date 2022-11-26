@@ -1,4 +1,6 @@
 @extends('layouts.admin.assets')
+@section('midtrans')
+    @include('layouts.admin.midtrans')
 
 @section('content')
     @include('layouts.admin.header')
@@ -24,13 +26,14 @@
                     <div class="p-3 mb-2 bg-danger text-white rounded-3">{!! \Session::get('error') !!}</div>
                 @endif
                 {{-- <a class="btn btn-primary mb-3" href="{{ url('/admin-dashboard/rumah-sakit/create') }}">Create</a> --}}
-                <table class="table"  id="table_id">
+                <table class="table" id="table_id">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Nama</th>
                             <th scope="col">lama langganan</th>
                             <th scope="col">harga</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,6 +43,16 @@
                                 <td>{{ $v->nama }}</td>
                                 <td>{{ $v->lama_langganan }} hari</td>
                                 <td>{{ $v->harga }}</td>
+                                <td>
+                                    <a href="{{ url('admin-dashboard/paket/details') }}{{ '/' . $v->id }}"
+                                        target="_blank">Details</a>
+                                    {{-- <button class="btn btn-primary px-5" id="pay-button">Beli</button>
+                                    <form action="" id="submit_form" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="json" id="json_callback">
+                                    </form>
+                                    @include('layouts.script-midtrans') --}}
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
