@@ -19,7 +19,7 @@
      <nav class="header-nav ms-auto">
          <ul class="d-flex align-items-center">
 
-             <li class="nav-item d-block d-lg-none">
+             {{-- <li class="nav-item d-block d-lg-none">
                  <a class="nav-link nav-icon search-bar-toggle " href="#">
                      <i class="bi bi-search"></i>
                  </a>
@@ -162,7 +162,7 @@
                          <a href="#">Show all messages</a>
                      </li>
 
-                 </ul><!-- End Messages Dropdown Items -->
+                 </ul><!-- End Messages Dropdown Items --> --}}
 
              </li><!-- End Messages Nav -->
 
