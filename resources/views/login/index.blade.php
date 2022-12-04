@@ -10,13 +10,17 @@
                     </div>
                     <div class="card fat">
                         <div class="card-body">
+                            @if (\Session::has('loginFailed'))
+                                <div class="p-3 mb-2 bg-danger text-white rounded-3">{!! \Session::get('loginFailed') !!}</div>
+                                <br>
+                            @endif
                             <h4 class="card-title">Login</h4>
                             <form action="{{ url('sign-in') }}" method="POST" class="my-login-validation" novalidate="">
                                 @csrf
                                 <div class="form-group">
                                     <label for="email">Username Address</label>
-                                    <input id="username" type="username" class="form-control" name="username" value=""
-                                        required autofocus>
+                                    <input id="username" type="username" class="form-control" name="username"
+                                        value="" required autofocus>
                                     <div class="invalid-feedback">
                                         Username is invalid
                                     </div>

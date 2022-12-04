@@ -11,13 +11,14 @@
                     <div class="card fat">
                         <div class="card-body">
                             <h4 class="card-title">Register</h4>
-                            <form method="POST" class="my-login-validation" novalidate="">
+                            <form action="{{ url('sign-up/store') }}" method="POST" class="my-login-validation" novalidate="">
+                                @csrf
                                 <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input id="name" type="text" class="form-control" name="name" required
+                                    <label for="name">username</label>
+                                    <input id="username" type="text" class="form-control" name="username" required
                                         autofocus>
                                     <div class="invalid-feedback">
-                                        What's your name?
+                                        What's your username?
                                     </div>
                                 </div>
 
@@ -37,8 +38,30 @@
                                         Password is required
                                     </div>
                                 </div>
-
                                 <div class="form-group">
+                                    {{-- <label for="name">no_telp</label>
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">+62</div>
+                                      </div>
+                                    <input id="no_telp" type="text" class="form-control" name="no_telp" required
+                                        autofocus>
+                                    <div class="invalid-feedback">
+                                        What's your no_telp?
+                                    </div> --}}
+                                    <label for="name">no_telp</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">+62</div>
+                                        </div>
+                                        <input id="no_telp" type="text" class="form-control" name="no_telp" required
+                                            autofocus>
+                                        <div class="invalid-feedback">
+                                            What's your no_telp?
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- <div class="form-group">
                                     <div class="custom-checkbox custom-control">
                                         <input type="checkbox" name="agree" id="agree" class="custom-control-input"
                                             required="">
@@ -48,7 +71,7 @@
                                             You must agree with our Terms and Conditions
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="form-group m-0">
                                     <button type="submit" class="btn btn-primary btn-block">

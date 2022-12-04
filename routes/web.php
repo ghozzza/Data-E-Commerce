@@ -64,3 +64,4 @@ Route::post('/sign-in', [LoginController::class, "login"]);
 Route::post('/logout', [LoginController::class, "logout"]);
 
 Route::get('/sign-up', [registerController::class, "index"]);
+Route::post('/sign-up/store', [registerController::class, "store"]);
