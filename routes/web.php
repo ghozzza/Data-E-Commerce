@@ -14,6 +14,7 @@ use App\Http\Controllers\adminRumahSakitController;
 use App\Http\Controllers\adminSekolahController;
 use App\Http\Controllers\adminOrderController;
 use App\Http\Controllers\adminUserController;
+use App\Http\Controllers\adminScrappingController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registerController;
 
@@ -58,6 +59,13 @@ Route::get('/admin-dashboard/user', [adminUserController::class, "index"])->midd
 Route::get('/admin-dashboard/paket', [adminPaketController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/paket/details/{id}', [adminPaketController::class, "details"])->middleware('auth', 'auth.role:1');
 Route::post('/admin-dashboard/paket/details/{id}', [adminPaketController::class, "payment_post"])->middleware('auth', 'auth.role:1');
+
+// scrapping 
+Route::get('/admin-dashboard/scrapping', [adminScrappingController::class, "index"])->middleware('auth', 'auth.role:1');
+// Route::get('/admin-dashboard/scrapping/details?index={i}', [adminScrappingController::class, "details"])->middleware('auth', 'auth.role:1');
+ Route::post('/admin-dashboard/scrapping/details', [adminScrappingController::class, "details"])->middleware('auth', 'auth.role:1');
+
+
 
 Route::get('/sign-in', [loginController::class, "index"]);
 Route::post('/sign-in', [LoginController::class, "login"]);

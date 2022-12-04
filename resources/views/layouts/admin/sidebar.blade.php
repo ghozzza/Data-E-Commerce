@@ -81,7 +81,12 @@
                 <span>Order</span>
             </a>
         </li>
-
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ url('/admin-dashboard/scrapping') }}">
+                <i class="bi bi-grid"></i>
+                <span>Scrapping</span>
+            </a>
+        </li>
     </ul>
 
 </aside><!-- End Sidebar-->
