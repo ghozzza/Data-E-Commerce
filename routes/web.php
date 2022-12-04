@@ -17,6 +17,9 @@ use App\Http\Controllers\adminUserController;
 use App\Http\Controllers\adminScrappingController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registerController;
+use App\Http\Controllers\homeController;
+use App\Http\Controllers\paketController;
+use App\Http\Controllers\riwayatPembelianController;
 
 
 /*
@@ -30,9 +33,9 @@ use App\Http\Controllers\registerController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/admin-dashboard', [adminController::class, "index"])->middleware('auth', 'auth.role:1');
 Route::get('/admin-dashboard/kabupaten', [adminKabupatenController::class, "index"])->middleware('auth', 'auth.role:1');
@@ -66,10 +69,18 @@ Route::get('/admin-dashboard/scrapping', [adminScrappingController::class, "inde
  Route::get('/admin-dashboard/scrapping/details', [adminScrappingController::class, "details"])->middleware('auth', 'auth.role:1');
 
 
-
+// Auth
 Route::get('/sign-in', [loginController::class, "index"]);
 Route::post('/sign-in', [LoginController::class, "login"]);
 Route::post('/logout', [LoginController::class, "logout"]);
 
 Route::get('/sign-up', [registerController::class, "index"]);
 Route::post('/sign-up/store', [registerController::class, "store"]);
+
+// USER AREA
+Route::get('/', [homeController::class, "index"]);
+
+Route::get('/paket/{id}', [paketController::class, "details"]);
+Route::post('/paket/{id}', [paketController::class, "payment_post"]);
+
+Route::get('/riwayat-pembelian', [riwayatPembelianController::class, "index"]);
