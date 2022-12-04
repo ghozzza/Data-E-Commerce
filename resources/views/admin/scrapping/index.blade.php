@@ -40,8 +40,8 @@
                             <th scope="row">{{ $i + 1 }}</th>
                             <td>{{ $v->nama }}</td>
                             <td>
-                                <form action="{{ url('admin-dashboard/scrapping/details') }}" method="POST">
-                                    @csrf
+                                <form action="{{ url('admin-dashboard/scrapping/details') }}" method="GET">
+                                    {{-- @csrf --}}
                                     <input type="hidden" name="index" value="{{ $i }}">
                                     <button class="btn btn-primary">Details</button>
                                 </form>

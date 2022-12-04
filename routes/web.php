@@ -63,7 +63,7 @@ Route::post('/admin-dashboard/paket/details/{id}', [adminPaketController::class,
 // scrapping 
 Route::get('/admin-dashboard/scrapping', [adminScrappingController::class, "index"])->middleware('auth', 'auth.role:1');
 // Route::get('/admin-dashboard/scrapping/details?index={i}', [adminScrappingController::class, "details"])->middleware('auth', 'auth.role:1');
- Route::post('/admin-dashboard/scrapping/details', [adminScrappingController::class, "details"])->middleware('auth', 'auth.role:1');
+ Route::get('/admin-dashboard/scrapping/details', [adminScrappingController::class, "details"])->middleware('auth', 'auth.role:1');
 
 
 
