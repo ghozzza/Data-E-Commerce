@@ -20,6 +20,7 @@ use App\Http\Controllers\registerController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\paketController;
 use App\Http\Controllers\riwayatPembelianController;
+use App\Http\Controllers\dashboardController;
 
 
 /*
@@ -84,3 +85,8 @@ Route::get('/paket/{id}', [paketController::class, "details"]);
 Route::post('/paket/{id}', [paketController::class, "payment_post"]);
 
 Route::get('/riwayat-pembelian', [riwayatPembelianController::class, "index"]);
+
+Route::get('/dashboard', [dashboardController::class, "index"]);
+Route::get('/dashboard/provinsi', [dashboardController::class, "provinsi"]);
+Route::get('/dashboard/provinsi/kota', [dashboardController::class, "kota"]);
+Route::get('/dashboard/provinsi/kecamatan', [dashboardController::class, "kecamatan"]);

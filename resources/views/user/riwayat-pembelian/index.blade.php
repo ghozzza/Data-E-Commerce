@@ -34,7 +34,7 @@
                                 <td>Lunas</td>
                             @else
                                 <td>{{ $responses[$i]['transaction_status'] }}</td>
-                            @endif
+                            @endif 
                         </tr>
                     @endforeach
                 </tbody>
