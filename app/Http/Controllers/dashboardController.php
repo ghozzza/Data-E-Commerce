@@ -29,6 +29,7 @@ class dashboardController extends Controller
         return view('user.dashboard.provinsi.index', ['scrap' => $scrap, 'data' => $data]);
     }
     public function kota(Request $request)
+    
     {
         $kode_kota = $request->kode_wilayah_kota;
         $kode = $request->kode_wilayah;
@@ -40,7 +41,7 @@ class dashboardController extends Controller
         $data = json_decode($data);
         $data = $data[$i];
         // dd($data);
-        return view('user.dashboard.provinsi.index', ['scrap' => $scrap, 'data' => $data]);
+        return view('user.dashboard.provinsi.kota.index', ['scrap' => $scrap, 'data' => $data]);
     }
     public function kecamatan(Request $request)
     {
@@ -54,6 +55,6 @@ class dashboardController extends Controller
         $data = json_decode($data);
         $data = $data[$i];
         // dd($data);
-        return view('user.dashboard.provinsi.kecamatan.index', ['scrap' => $scrap, 'data' => $data]);
+        return view('user.dashboard.provinsi.kota.kecamatan.index', ['scrap' => $scrap, 'data' => $data]);
     }
 }

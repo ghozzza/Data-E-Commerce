@@ -42,6 +42,14 @@
     <script src="<?= asset('user/assets/vendor/swiper/swiper-bundle.min.js') ?>"></script>
     <script src="<?= asset('user/assets/vendor/php-email-form/validate.js') ?>"></script>
 
+    <!-- Vendor JS Files -->
+    <script src="<?= asset('admin/assets/vendor/apexcharts/apexcharts.min.js') ?>"></script>
+    <script src="<?= asset('admin/assets/vendor/chart.js/chart.min.js') ?>"></script>
+    <script src="<?= asset('admin/assets/vendor/echarts/echarts.min.js') ?>"></script>
+    <script src="<?= asset('admin/assets/vendor/quill/quill.min.js') ?>"></script>
+    <script src="<?= asset('admin/assets/vendor/simple-datatables/simple-datatables.js') ?>"></script>
+    <script src="<?= asset('admin/assets/vendor/tinymce/tinymce.min.js') ?>"></script>
+
     <!-- Template Main JS File -->
     <script src="<?= asset('user/assets/js/main.js') ?>"></script>
 

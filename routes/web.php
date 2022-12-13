@@ -89,4 +89,4 @@ Route::get('/riwayat-pembelian', [riwayatPembelianController::class, "index"]);
 Route::get('/dashboard', [dashboardController::class, "index"]);
 Route::get('/dashboard/provinsi', [dashboardController::class, "provinsi"]);
 Route::get('/dashboard/provinsi/kota', [dashboardController::class, "kota"]);
-Route::get('/dashboard/provinsi/kecamatan', [dashboardController::class, "kecamatan"]);
+Route::get('/dashboard/provinsi/kota/kecamatan', [dashboardController::class, "kecamatan"]);

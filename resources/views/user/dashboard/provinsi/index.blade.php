@@ -13,12 +13,13 @@
             <div class="text-center mb-5">
                 <h1>Dashboard / Provinsi</h1>
             </div>
+            @include('layouts.user.bar-chart')
             <div class="row">
                 <hr>
                 <div class="text-center">
                     <h3>Visualisasi Data {{ $data->nama }}</h3>
                 </div>
-                <p>tk: {{ $data->tk }}</p>
+                {{-- <p>tk: {{ $data->tk }}</p>
                 <p>kb: {{ $data->kb }}</p>
                 <p>sps: {{ $data->sps }}</p>
                 <p>pkbm: {{ $data->pkbm }}</p>
@@ -29,7 +30,7 @@
                 <p>sma: {{ $data->sma }}</p>
                 <p>smk: {{ $data->smk }}</p>
                 <p>slb: {{ $data->slb }}</p>
-                <b> total sekolah: {{ $data->sekolah }}</b>
+                <b> total sekolah: {{ $data->sekolah }}</b> --}}
                 <hr>
                 @foreach ($scrap as $i => $v)
                     <div class="col-4 mb-3">
