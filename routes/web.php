@@ -81,12 +81,12 @@ Route::post('/sign-up/store', [registerController::class, "store"]);
 // USER AREA
 Route::get('/', [homeController::class, "index"]);
 
-Route::get('/paket/{id}', [paketController::class, "details"]);
-Route::post('/paket/{id}', [paketController::class, "payment_post"]);
+Route::get('/paket/{id}', [paketController::class, "details"])->middleware('auth', 'auth.role:2');
+Route::post('/paket/{id}', [paketController::class, "payment_post"])->middleware('auth', 'auth.role:2');
 
 Route::get('/riwayat-pembelian', [riwayatPembelianController::class, "index"]);
 
-Route::get('/dashboard', [dashboardController::class, "index"]);
-Route::get('/dashboard/provinsi', [dashboardController::class, "provinsi"]);
-Route::get('/dashboard/provinsi/kota', [dashboardController::class, "kota"]);
-Route::get('/dashboard/provinsi/kota/kecamatan', [dashboardController::class, "kecamatan"]);
+Route::get('/dashboard', [dashboardController::class, "index"])->middleware('auth', 'auth.role:2');
+Route::get('/dashboard/provinsi', [dashboardController::class, "provinsi"])->middleware('auth', 'auth.role:2');
+Route::get('/dashboard/provinsi/kota', [dashboardController::class, "kota"])->middleware('auth', 'auth.role:2');
+Route::get('/dashboard/provinsi/kota/kecamatan', [dashboardController::class, "kecamatan"])->middleware('auth', 'auth.role:2');

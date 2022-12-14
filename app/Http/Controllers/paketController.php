@@ -81,7 +81,7 @@ class paketController extends Controller
         $order->tgl_berakhir_langganan = date("Y-m-d", strtotime(' + ' . $pakets['lama_langganan'] . ' days'));
         $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
-        return $order->save() ? redirect(url('/admin-dashboard/paket'))->with('success', 'Jadwalmu Berhasil di Order!') : redirect(url('/admin-dashboard/paket'))->with('alert-failed', 'Terjadi kesalahan');
+        return $order->save() ? redirect(url('/riwayat-pembelian'))->with('success', 'Jadwalmu Berhasil di Order!') : redirect(url('/riwayat-pembelian'))->with('alert-failed', 'Terjadi kesalahan');
 
         // dd();
     }
