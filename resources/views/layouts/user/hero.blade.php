@@ -11,8 +11,7 @@
                      <div class="carousel-container">
                          <div class="container">
                              <h2 class="animate__animated animate__fadeInDown">Dashboard Akademik</h2>
-                             <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo
-                                 enim ipsam voluptatem</p>
+                             <p class="animate__animated animate__fadeInUp">Layanan Visualisasi Data</p>
                              @if (Auth::user())
                                  <a href="#"
                                      class="btn-get-started scrollto animate__animated animate__fadeInUp">Mulai</a>
@@ -25,8 +24,7 @@
                      <div class="carousel-container">
                          <div class="container">
                              <h2 class="animate__animated animate__fadeInDown">Dashboard Kesehatan</h2>
-                             <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo
-                                 enim ipsam voluptatem</p>
+                             <p class="animate__animated animate__fadeInUp">Layanan Visualisasi Data</p>
                              @if (Auth::user())
                                  <a href="#main"
                                      class="btn-get-started scrollto animate__animated animate__fadeInUp">Mulai</a>
