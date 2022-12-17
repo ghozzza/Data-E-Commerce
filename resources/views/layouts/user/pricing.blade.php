@@ -13,7 +13,12 @@
                     <div class="pri_table_list">
                         <h3>Paket {{ $v->nama }} <br /> <span>Rp. {{ $v->harga }}</span></h3>
                         <h5>{{ $v->lama_langganan }} Hari</h5>
-                        <a class="btn btn-primary px-5 mb-4" href="{{ url('paket/') }}{{ '/' . $v->id }}" target="_blank">Beli</a>
+                        @if (Auth::user())
+                            <a class="btn btn-primary px-5 mb-4" href="{{ url('paket/') }}{{ '/' . $v->id }}"
+                                target="_blank">Beli</a>
+                        @else
+                            <a class="btn btn-primary px-5 mb-4" href="{{ url('sign-in') }}">Beli</a>
+                        @endif
                     </div>
                 </div>
             @endforeach

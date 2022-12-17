@@ -20,6 +20,7 @@
                         <th scope="col">Nama Paket</th>
                         <th scope="col">Harga</th>
                         <th scope="col">ID Order</th>
+                        <th scope="col">Tanggal Berlaku</th>
                         <th scope="col">Status</th>
                     </tr>
                 </thead>
@@ -30,11 +31,12 @@
                             <td>{{ $v->nama_paket }}</td>
                             <td>{{ $v->gross_amount }}</td>
                             <td>{{ $v->order_id }}</td>
+                            <td>{{ $v->tgl_berakhir_langganan }}</td>
                             @if ($responses[$i]['transaction_status'] == 'settlement')
                                 <td>Lunas</td>
                             @else
                                 <td>{{ $responses[$i]['transaction_status'] }}</td>
-                            @endif 
+                            @endif
                         </tr>
                     @endforeach
                 </tbody>

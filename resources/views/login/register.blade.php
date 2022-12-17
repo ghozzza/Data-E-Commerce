@@ -11,7 +11,8 @@
                     <div class="card fat">
                         <div class="card-body">
                             <h4 class="card-title">Register</h4>
-                            <form action="{{ url('sign-up/store') }}" method="POST" class="my-login-validation" novalidate="">
+                            <form action="{{ url('sign-up/store') }}" method="POST" class="my-login-validation"
+                                novalidate="">
                                 @csrf
                                 <div class="form-group">
                                     <label for="name">username</label>
@@ -61,23 +62,18 @@
                                     </div>
                                 </div>
 
-                                {{-- <div class="form-group">
-                                    <div class="custom-checkbox custom-control">
-                                        <input type="checkbox" name="agree" id="agree" class="custom-control-input"
-                                            required="">
-                                        <label for="agree" class="custom-control-label">I agree to the <a
-                                                href="#">Terms and Conditions</a></label>
-                                        <div class="invalid-feedback">
-                                            You must agree with our Terms and Conditions
-                                        </div>
-                                    </div>
-                                </div> --}}
-
                                 <div class="form-group m-0">
                                     <button type="submit" class="btn btn-primary btn-block">
                                         Register
                                     </button>
                                 </div>
+
+                                <div class="form-group m-0 mt-3">
+                                    <a href="{{ url('/') }}" class="btn btn-link btn-block">
+                                        Kembali
+                                    </a>
+                                </div>
+
                                 <div class="mt-4 text-center">
                                     Already have an account? <a href="{{ url('sign-in') }}">Login</a>
                                 </div>
@@ -85,7 +81,7 @@
                         </div>
                     </div>
                     <div class="footer">
-                        Copyright &copy; 2017 &mdash; Your Company
+                        Copyright &copy; 2017 &mdash; Kelompok 1
                     </div>
                 </div>
             </div>

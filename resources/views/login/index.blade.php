@@ -51,6 +51,11 @@
                                         Login
                                     </button>
                                 </div>
+                                <div class="form-group m-0 mt-3">
+                                    <a href="{{ url('/') }}" class="btn btn-link btn-block">
+                                        Kembali
+                                    </a>
+                                </div>
                                 <div class="mt-4 text-center">
                                     Don't have an account? <a href="{{ url('sign-up') }}">Create One</a>
                                 </div>

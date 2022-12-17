@@ -10,7 +10,6 @@
                     <div class="card bg-light mb-3" style="max-width: 18rem;">
                         <div class="card-header">
                             <h5>{{ $v->nama }}</h5>
-                            <p>{{ $v->kode_wilayah }} prov</p>
                             <form action="{{ url('dashboard/provinsi') }}" method="GET">
                                 <input type="hidden" name="index" value="{{ $i }}">
                                 <input type="hidden" name="kode_wilayah" value="{{ $v->kode_wilayah }}">
