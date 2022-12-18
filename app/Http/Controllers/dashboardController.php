@@ -86,15 +86,20 @@ class dashboardController extends Controller
         $kode_kecamatan = $request->kode_wilayah_kecamatan;
         $kode = $request->kode_wilayah;
         $i = $request->index;
-        $data = Http::get('https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=1&kode_wilayah=' . $kode_kecamatan . '&semester_id=20221');
-        $responses = Http::get('https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=' . $kode . '&semester_id=20221');
+        // dd($kode_kecamatan);
+        // $data = Http::get('https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=1&kode_wilayah=' . $kode_kecamatan . '&semester_id=20221');
+        $data = Http::get('https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=' . $kode_kecamatan . '&semester_id=20221');
+        $responses = Http::get('https://dapo.kemdikbud.go.id/rekap/progresSP?id_level_wilayah=3&kode_wilayah=' . $kode . '&semester_id=20221&bentuk_pendidikan_id=');
+
         $scrap = json_decode($responses);
         // dd($scrap);
         $data = json_decode($data);
+        // dd($data);
         $data = $data[$i];
         // dd($data);
         return view('user.dashboard.provinsi.kota.kecamatan.index', ['scrap' => $scrap, 'data' => $data, 'orders' => $orders, 'orders_count' => $orders_count, 'mid' => $mid]);
     }
+    // 
     function order($orders_count, $orders)
     {
         if ($orders_count != 0) {
