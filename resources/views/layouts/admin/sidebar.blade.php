@@ -69,12 +69,12 @@
                 <span>Profil User</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link collapsed" href="{{ url('/admin-dashboard/riwayat-order') }}">
                 <i class="bi bi-grid"></i>
                 <span>Riwayat Order</span>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{ url('/admin-dashboard/order') }}">
                 <i class="bi bi-grid"></i>

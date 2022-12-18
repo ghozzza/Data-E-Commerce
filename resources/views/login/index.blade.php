@@ -14,41 +14,41 @@
                                 <div class="p-3 mb-2 bg-danger text-white rounded-3">{!! \Session::get('loginFailed') !!}</div>
                                 <br>
                             @endif
-                            <h4 class="card-title">Login</h4>
+                            <h4 class="card-title" style="text-align:center">Masuk</h4>
                             <form action="{{ url('sign-in') }}" method="POST" class="my-login-validation" novalidate="">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="email">Username Address</label>
+                                    <label for="email">Username</label>
                                     <input id="username" type="username" class="form-control" name="username"
                                         value="" required autofocus>
                                     <div class="invalid-feedback">
-                                        Username is invalid
+                                        Username tidak valid
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="password">Password
                                         <a href="forgot.html" class="float-right">
-                                            Forgot Password?
+                                            Lupa Password?
                                         </a>
                                     </label>
                                     <input id="password" type="password" class="form-control" name="password" required
                                         data-eye>
                                     <div class="invalid-feedback">
-                                        Password is required
+                                        Password tidak valid
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <div class="custom-checkbox custom-control">
                                         <input type="checkbox" name="remember" id="remember" class="custom-control-input">
-                                        <label for="remember" class="custom-control-label">Remember Me</label>
+                                        <label for="remember" class="custom-control-label">Ingat Saya</label>
                                     </div>
                                 </div>
 
                                 <div class="form-group m-0">
                                     <button type="submit" class="btn btn-primary btn-block">
-                                        Login
+                                        Masuk
                                     </button>
                                 </div>
                                 <div class="form-group m-0 mt-3">
@@ -57,13 +57,13 @@
                                     </a>
                                 </div>
                                 <div class="mt-4 text-center">
-                                    Don't have an account? <a href="{{ url('sign-up') }}">Create One</a>
+                                    Belum memiliki akun? <a href="{{ url('sign-up') }}">Daftar</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="footer">
-                        Copyright &copy; &mdash; Kelompok 1
+                        Copyright &copy; 2022 &mdash; Kelompok 1
                     </div>
                 </div>
             </div>

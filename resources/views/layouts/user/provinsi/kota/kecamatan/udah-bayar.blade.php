@@ -22,20 +22,20 @@
                 <table class=" table display table-stripped" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">npsn</th>
-                            <th scope="col">jumlah_kirim</th>
-                            <th scope="col">ptk</th>
-                            <th scope="col">pegawai</th>
+                            <th scope="col">NPSN</th>
+                            <th scope="col">Jumlah Kirim</th>
+                            <th scope="col">PTK</th>
+                            <th scope="col">Pegawai</th>
                             <th scope="col">pd</th>
-                            <th scope="col">rombel</th>
-                            <th scope="col">jml_rk</th>
-                            <th scope="col">jml_lab</th>
-                            <th scope="col">jml_perpus</th>
-                            <th scope="col">bentuk_pendidikan</th>
-                            <th scope="col">status_sekolah</th>
-                            <th scope="col">sinkron_terakhir</th>
+                            <th scope="col">Rombel</th>
+                            <th scope="col">Jml rk</th>
+                            <th scope="col">Jml Lab</th>
+                            <th scope="col">Jml Perpus</th>
+                            <th scope="col">Bentuk Pendidikan</th>
+                            <th scope="col">Status Sekolah</th>
+                            <th scope="col">Sinkron Terakhir</th>
                             <th scope="col">Profile</th>
                         </tr>
                     </thead>

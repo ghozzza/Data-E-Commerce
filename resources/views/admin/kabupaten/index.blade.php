@@ -27,8 +27,8 @@
                 <table class="table" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nama</th>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Kabupaten</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -27,12 +27,12 @@
                 <table class="table" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">tanggal</th>
-                            <th scope="col">nama_kamar</th>
-                            <th scope="col">jml_kosong</th>
-                            <th scope="col">jml_ruang</th>
-                            <th scope="col">jml_terisi</th>
+                            <th scope="col">No</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Nama Kamar</th>
+                            <th scope="col">Jumlah Kosong</th>
+                            <th scope="col">Jumlah Ruang</th>
+                            <th scope="col">Jumlah Terisi</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -29,11 +29,11 @@
                 <table class="table" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col">Kode</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">lama langganan</th>
-                            <th scope="col">harga</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Lama Langganan</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>

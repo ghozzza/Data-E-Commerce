@@ -8,11 +8,11 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>Profil User</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item active">Profil User</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -30,9 +30,9 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">id_user</th>
-                        <th scope="col">alamat</th>
-                        <th scope="col">regency_id</th>
+                        <th scope="col">ID User</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Kode Kabupaten</th>
                     </tr>
                 </thead>
                 <tbody>

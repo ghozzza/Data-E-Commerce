@@ -8,7 +8,7 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>Kecamatan</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -27,8 +27,8 @@
                 <table class="table" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nama</th>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Kecamatan</th>
                         </tr>
                     </thead>
                     <tbody>

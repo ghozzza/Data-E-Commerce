@@ -8,12 +8,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Create Data</h1>
+            <h1>Tambah Data</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('admin-dashboard/') }}">Home</a></li>
                     <li class="breadcrumb-item"><a href="{{ url('admin-dashboard/rumah-sakit') }}">Rumah Sakit</a></li>
-                    <li class="breadcrumb-item active">Create</li>
+                    <li class="breadcrumb-item active">Tambah Data</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -31,10 +31,10 @@
                     <br>
                     <div class="row">
                         <div class="col-1">
-                            <button type="submit" class="btn btn-primary px-2">Sumbit</button>
+                            <button type="submit" class="btn btn-primary px-2">Submit</button>
                         </div>
                         <div class="col-1">
-                            <a href="{{ url('admin-dashboard/rumah-sakit') }}" class="btn btn-warning px-3">Back</a>
+                            <a href="{{ url('admin-dashboard/rumah-sakit') }}" class="btn btn-warning px-3">Kembali</a>
                         </div>
 
                         {{-- <div class="col-1">

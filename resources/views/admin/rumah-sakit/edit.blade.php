@@ -38,7 +38,7 @@
                             <button type="submit" class="btn btn-primary px-2">Edit</button>
                         </div>
                         <div class="col-1">
-                            <a href="{{ url('admin-dashboard/rumah-sakit') }}" class="btn btn-warning px-3">Back</a>
+                            <a href="{{ url('admin-dashboard/rumah-sakit') }}" class="btn btn-warning px-3">Kembali</a>
                         </div>
 
                         {{-- <div class="col-1">

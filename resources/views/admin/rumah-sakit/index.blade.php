@@ -27,15 +27,15 @@
                 @elseif(\Session::has('error'))
                     <div class="p-3 mb-2 bg-danger text-white rounded-3">{!! \Session::get('error') !!}</div>
                 @endif
-                <a class="btn btn-primary mb-3" href="{{ url('/admin-dashboard/rumah-sakit/create') }}">Create</a>
+                <a class="btn btn-primary mb-3" href="{{ url('/admin-dashboard/rumah-sakit/create') }}">Tambah Data</a>
                 <table class="table" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Alamat</th>
                             <th scope="col">Nomor Telepon</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,7 +51,7 @@
                                         action="{{ url('/admin-dashboard/rumah-sakit/delete/' . $v->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit"class="btn btn-danger">Delete</button>
+                                        <button type="submit"class="btn btn-danger">Hapus</button>
                                     </form>
                                 </td>
                             </tr>

@@ -10,24 +10,24 @@
                     </div>
                     <div class="card fat">
                         <div class="card-body">
-                            <h4 class="card-title">Register</h4>
+                            <h4 class="card-title" style="text-align:center">Daftar</h4>
                             <form action="{{ url('sign-up/store') }}" method="POST" class="my-login-validation"
                                 novalidate="">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="name">username</label>
+                                    <label for="name">Username</label>
                                     <input id="username" type="text" class="form-control" name="username" required
                                         autofocus>
                                     <div class="invalid-feedback">
-                                        What's your username?
+                                        Masukkan username Anda
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="email">E-Mail Address</label>
+                                    <label for="email">Alamat Email</label>
                                     <input id="email" type="email" class="form-control" name="email" required>
                                     <div class="invalid-feedback">
-                                        Your email is invalid
+                                        Email tidak valid
                                     </div>
                                 </div>
 
@@ -36,7 +36,7 @@
                                     <input id="password" type="password" class="form-control" name="password" required
                                         data-eye>
                                     <div class="invalid-feedback">
-                                        Password is required
+                                        Masukkan Password
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -49,7 +49,7 @@
                                     <div class="invalid-feedback">
                                         What's your no_telp?
                                     </div> --}}
-                                    <label for="name">no_telp</label>
+                                    <label for="name">Nomor Telepon</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">+62</div>
@@ -57,14 +57,14 @@
                                         <input id="no_telp" type="text" class="form-control" name="no_telp" required
                                             autofocus>
                                         <div class="invalid-feedback">
-                                            What's your no_telp?
+                                            Masukkan nomor telepon
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group m-0">
                                     <button type="submit" class="btn btn-primary btn-block">
-                                        Register
+                                        Daftar
                                     </button>
                                 </div>
 
@@ -75,13 +75,13 @@
                                 </div>
 
                                 <div class="mt-4 text-center">
-                                    Already have an account? <a href="{{ url('sign-in') }}">Login</a>
+                                    Sudah memiliki akun? <a href="{{ url('sign-in') }}">Masuk</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="footer">
-                        Copyright &copy; 2017 &mdash; Kelompok 1
+                        Copyright &copy; 2022 &mdash; Kelompok 1
                     </div>
                 </div>
             </div>

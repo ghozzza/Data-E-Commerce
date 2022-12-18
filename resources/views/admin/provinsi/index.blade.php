@@ -10,7 +10,7 @@
         <div class="pagetitle">
             <div class="container">
 
-                <h1>Rumah Sakit</h1>
+                <h1>Provinsi</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ url('admin-dashboard/') }}">Home</a></li>
@@ -31,8 +31,8 @@
                 <table class="table" id="table_id">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Nama</th>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Provinsi</th>
                         </tr>
                     </thead>
                     <tbody>
