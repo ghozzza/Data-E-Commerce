@@ -25,6 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     @foreach ($order as $i => $v)
                         <tr>
                             <th scope="row">{{ $i + 1 }}</th>
@@ -32,10 +33,12 @@
                             <td>{{ $v->gross_amount }}</td>
                             <td>{{ $v->order_id }}</td>
                             <td>{{ $v->tgl_berakhir_langganan }}</td>
-                            @if ($responses[$i]['transaction_status'] == 'settlement')
-                                <td>Lunas</td>
-                            @else
-                                <td>{{ $responses[$i]['transaction_status'] }}</td>
+                            @if ($responses[$i] != null)
+                                @if ($responses[$i]['transaction_status'] == 'settlement')
+                                    <td>Lunas</td>
+                                @else
+                                    <td>{{ $responses[$i]['transaction_status'] }}</td>
+                                @endif
                             @endif
                         </tr>
                     @endforeach

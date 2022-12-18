@@ -12,13 +12,13 @@
              <ul>
                  @if (Auth::user())
                      <!-- <li><a class="nav-link scrollto active">Halo, {{ Auth::user()->username }}</a></li> -->
-                     <li><a class="nav-link scrollto" href="{{ url('/#') }}">Beranda</a></li>
+                     <li><a class="nav-link scrollto" href="{{ url('/') }}">Beranda</a></li>
                      <li><a class="nav-link scrollto" href="{{ url('/#pricing') }}">Langganan</a></li>
                      <li><a class="nav-link scrollto" href="{{ url('/dashboard') }}">Dashboard</a></li>
                      <li class="dropdown"><a href="#"><span>{{ Auth::user()->username }}</span> <i
                                  class="bi bi-chevron-down"></i></a>
                          <ul>
-                             <li><a href="#">Profile</a></li>
+                             <li><a href="{{ url('/edit') }}">Profile</a></li>
                              <li><a href="{{ url('riwayat-pembelian') }}">Riwayat Pembelian</a></li>
                              <li>
                                  <form action="{{ url('logout') }}" method="POST" class="my-login-validation"

@@ -48,7 +48,6 @@ class riwayatPembelianController extends Controller
                     // continue;
                 }
             }
-
             curl_close($curl);
             return view('user.riwayat-pembelian.index', [
                 'order' => $order,

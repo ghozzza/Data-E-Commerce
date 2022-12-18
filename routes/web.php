@@ -80,6 +80,10 @@ Route::post('/sign-up/store', [registerController::class, "store"]);
 
 // USER AREA
 Route::get('/', [homeController::class, "index"]);
+Route::get('/edit', [homeController::class, "edit"]);
+Route::put('/edit/update', [homeController::class, "update"]);
+Route::get('/edit/password', [homeController::class, "password"]);
+Route::put('/edit/password/update', [homeController::class, "updatePassword"]);
 
 Route::get('/paket/{id}', [paketController::class, "details"])->middleware('auth', 'auth.role:2');
 Route::post('/paket/{id}', [paketController::class, "payment_post"])->middleware('auth', 'auth.role:2');
