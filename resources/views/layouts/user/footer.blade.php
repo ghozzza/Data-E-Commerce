@@ -10,7 +10,7 @@
                          </p>
                      </div>
                      <div class="credits">
-                         Designed by <a href="https://bootstrapmade.com/">Kelompok 1</a>
+                         Designed by <a href="#">Kelompok 1</a>
                      </div>
                  </div>
              </div>
